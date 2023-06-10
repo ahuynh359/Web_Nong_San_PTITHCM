@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+                        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+                        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!-- Cấu hình interceptor -->
+    <mvc:interceptors>
+        <!-- Lọc tất cả các URL -->
+        <bean class="tad.interceptor.GlobalInterceptor" />
+
+        <mvc:interceptor>
+            <!-- CHƯA đăng nhập thì KHÔNG được truy cập URL bên dưới -->
+            <mvc:mapping path="/user**"/>
+            <mvc:mapping path="/user/"/>
+            <mvc:exclude-mapping path="/user**" />
+            <bean class="tad.interceptor.UserInterceptor" />
+        </mvc:interceptor>
+
+        <mvc:interceptor>
+            <!-- CHƯA đăng nhập thì KHÔNG được truy cập URL bên dưới -->
+            <mvc:mapping path="/admin/**" />
+            <bean class="tad.interceptor.AdminInterceptor" />
+        </mvc:interceptor>
+
+        <mvc:interceptor>
+            <!-- Đã đăng nhập thì KHÔNG được truy cập URL bên dưới -->
+            <mvc:mapping path="/guest/**" />
+            <mvc:exclude-mapping path="/guest/logout.htm" />
+            <bean class="tad.interceptor.GuestInterceptor" />
+        </mvc:interceptor>
+        
+        <mvc:interceptor>
+            <!-- Đã đăng nhập thì KHÔNG được truy cập URL bên dưới -->
+            <mvc:mapping path="/employee/**" />
+            <mvc:exclude-mapping path="/employee/logout.htm" />
+            <bean class="tad.interceptor.EmployeeInterceptor" />
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+
+</beans>

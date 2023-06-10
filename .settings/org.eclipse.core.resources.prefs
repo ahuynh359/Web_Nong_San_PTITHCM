@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+encoding//i18n-res/global.wishlist_vi.properties=UTF-8
+encoding//i18n-res/global_vi.properties=UTF-8
+encoding//i18n-res/home_vi.properties=UTF-8
+encoding//src/main/webapp/WEB-INF/views/include/cart.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/include/header.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/product/index.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/product/productAsideBar.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/search/index.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/user/user-login.jsp=UTF-8
