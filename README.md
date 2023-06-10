@@ -104,5 +104,10 @@ Các file .js trong bootstrap sẽ bị lỗi tuy nhiên chạy vẫn ok do th�
 
 ## Video Demo
 https://www.youtube.com/watch?v=tTEv9z3x6Bk
+
+## Điểm trừ
+Database nên thiết kế thêm bảng Coupon Detail để lưu trữ sản phẩm nào đã từng áp dụng Coupon nào
+Về phần admin và employee còn khá sơ sài (ko update được coupon) và một vài lỗi nhặt khác
+Chưa tối ưu được code mạnh ai nấy code :)) 
     
   
