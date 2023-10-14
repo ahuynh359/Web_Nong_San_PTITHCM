@@ -110,4 +110,6 @@ Database nên thiết kế thêm bảng Coupon Detail để lưu trữ sản ph�
 Về phần admin và employee còn khá sơ sài (ko update được coupon) và một vài lỗi nhặt khác
 Chưa tối ưu được code mạnh ai nấy code :)) 
     
-  
+## Báo cáo
+[Báo cáo CNPM - Nhóm 08.docx](https://github.com/ahuynh359/Web_Nong_San/files/12907424/Bao.cao.CNPM.-.Nhom.08.docx)
+
